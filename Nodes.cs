@@ -10,6 +10,7 @@ namespace linkLIASt2
     {
         public int data;
         public Nodes next;
+        Nodes T;
         public Nodes(int data)
         {
             this.data =data;
