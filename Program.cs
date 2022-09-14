@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
 
-            Console.WriteLine("chooes Number\n1.simple Linked List\n2.to create Linked\n3.List by appending\n4.Ability to insert\n5.Ability to delete the first element\n6.Ability to delete the last element\n7.Ability to search LinkedList");
+            Console.WriteLine("chooes Number\n1.simple Linked List\n2.to create Linked\n3.List by appending\n4.Ability to insert\n5.Ability to delete the first element\n6.Ability to delete the last element\n7.Ability to search LinkedList\n8.Ability to insert 40 after 30");
             int opt=Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
@@ -80,6 +80,19 @@
                     list7.Display();
                     Console.WriteLine("****Program End***\n");
                     break ;
+                case 8:
+                    CustmerLinkLIST list8 = new CustmerLinkLIST();
+                    list8.Add(56);
+                    list8.Add(30);
+                    list8.Add(70);
+                    list8.Display();
+                    int a4 = list8.Search(30);
+                    Console.WriteLine("index position of 30 is : " + a4);
+                    list8.InsertAfter(40, 30);
+                    Console.WriteLine("list after update");
+                    list8.Display();
+                    Console.WriteLine("****Program End***\n");
+                    break;
             }
 
 

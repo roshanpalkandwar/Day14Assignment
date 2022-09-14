@@ -8,7 +8,7 @@ using System.Xml.Linq;
 namespace linkLIASt2
 {
     internal class CustmerLinkLIST
-   {
+    {
         internal Nodes head;
 
         internal void Add(int data)
@@ -144,7 +144,56 @@ namespace linkLIASt2
             newNode.next = null;
             return head;
         }
+        public bool DeleteAnyElement(int data)     //delete data
+        {
+            bool flag = false;
+            int count = 0;
 
+            if (head == null)
+                Console.WriteLine("List is Empty");
+            else
+            {
+                Nodes temp = head;
+                Nodes previousNode = null;
+                while (temp != null)
+                {
+                    count++;
+                    if (temp.data == data)
+                    {
+                        if (count == 1)
+                        {
+                            head = temp.next;
+                        }
+                        else
+                        {
+                            previousNode.next = temp.next;
+                        }
+                        flag = true;
+                        break;
+                    }
+                    previousNode = temp;
+                    temp = temp.next;
+                }
+                if (!flag)
+                    Console.WriteLine("The Element is not in List");
+            }
 
-    }
+            return flag;
+        }
+        public int size()
+        {
+            Nodes temp = head;
+            int count = 0;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
+    }        
+      
+              
+                   
+           
 }
