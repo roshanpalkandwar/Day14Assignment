@@ -115,8 +115,5 @@ namespace linkLIASt2
             }
             return head;
         }
-
-
-
     }
 }
