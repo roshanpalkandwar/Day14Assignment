@@ -8,7 +8,7 @@ using System.Xml.Linq;
 namespace linkLIASt2
 {
     internal class CustmerLinkLIST
-    {
+   {
         internal Nodes head;
 
         internal void Add(int data)
@@ -125,5 +125,25 @@ namespace linkLIASt2
             this.head = this.head.next;
             return this.head;
         }
+
+        internal Nodes RemoveLastNode()
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            if (head.next == null)
+            {
+                return null;
+            }
+            Nodes newNode = head;
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return head;
+        }
+
     }
 }

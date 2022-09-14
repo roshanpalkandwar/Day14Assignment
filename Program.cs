@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
 
-            Console.WriteLine("chooes Number\n1.simple Linked List\n2.to create Linked\n3.List by appending\n4.Ability to insert\n5.Ability to delete the first\r\nelement");
+            Console.WriteLine("chooes Number\n1.simple Linked List\n2.to create Linked\n3.List by appending\n4.Ability to insert\n5.Ability to delete the first element\n6.Ability to delete the last element");
             int opt=Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
@@ -57,6 +57,17 @@
                     list5.RemoveFirstNode();
                     Console.WriteLine("After removing first element");
                     list5.Display();
+                    Console.WriteLine("****Program End***\n");
+                    break;
+                case 6:
+                    CustmerLinkLIST list6 = new CustmerLinkLIST();
+                    list6.Add(56);
+                    list6.Add(30);
+                    list6.Add(70);
+                    list6.Display();
+                    list6.RemoveLastNode();
+                    Console.WriteLine("After removing last element");
+                    list6.Display();
                     Console.WriteLine("****Program End***\n");
                     break;
             }
