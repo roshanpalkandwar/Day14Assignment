@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
 
-            Console.WriteLine("chooes Number\n1.simple Linked List\n2.to create Linked");
+            Console.WriteLine("chooes Number\n1.simple Linked List\n2.to create Linked\n3.List by appending");
             int opt=Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
@@ -28,6 +28,16 @@
                     list2.Display();
                     Console.WriteLine("****Program End***\n");
                     break;
+                case 3:
+                    CustmerLinkLIST list3 = new CustmerLinkLIST();
+
+                    list3.Add(56);
+                    list3.InsertAfter(30, 56);
+                    list3.InsertAfter(70, 30);
+                    Console.WriteLine("List after appending 30 and 70");
+                    list3.Display();
+                    Console.WriteLine("****Program End***\n");
+                    break ;
             }
 
 

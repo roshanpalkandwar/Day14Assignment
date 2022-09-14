@@ -9,7 +9,6 @@ namespace linkLIASt2
 {
     internal class CustmerLinkLIST
     {
-
         internal Nodes head;
 
         internal void Add(int data)
@@ -116,6 +115,7 @@ namespace linkLIASt2
             }
             return head;
         }
+
 
 
     }
