@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
 
-            Console.WriteLine("chooes Number\n1.simple Linked List\n2.to create Linked\n3.List by appending\n4.Ability to insert\n5.Ability to delete the first element\n6.Ability to delete the last element");
+            Console.WriteLine("chooes Number\n1.simple Linked List\n2.to create Linked\n3.List by appending\n4.Ability to insert\n5.Ability to delete the first element\n6.Ability to delete the last element\n7.Ability to search LinkedList");
             int opt=Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
@@ -70,25 +70,21 @@
                     list6.Display();
                     Console.WriteLine("****Program End***\n");
                     break;
+                case 7:
+                    CustmerLinkLIST list7 = new CustmerLinkLIST();
+                    list7.Add(56);
+                    list7.Add(30);
+                    list7.Add(70);
+                    int a3 = list7.Search(30);
+                    Console.WriteLine("index position of 30 is : " + a3);
+                    list7.Display();
+                    Console.WriteLine("****Program End***\n");
+                    break ;
             }
 
 
                
-          //CustmerLinkLIST custmerLinkLIST = new CustmerLinkLIST();
-          //  custmerLinkLIST.AddEnd(56);
-          //  custmerLinkLIST.AddEnd(30);
-          //  custmerLinkLIST.AddEnd(70);
-            
-          //  Console.WriteLine("element add after the head node");
-          //  custmerLinkLIST.Display();
-
-          //  CustmerLinkLIST custmerLinkLIST1 = new CustmerLinkLIST();
-          //  custmerLinkLIST1.AddFirst(11);
-          //  custmerLinkLIST1.AddFirst(12);
-          //  custmerLinkLIST1.AddFirst(13);
-          //  custmerLinkLIST1.AddFirst(14);
-          //  Console.WriteLine("element add before the head node");
-          //  custmerLinkLIST1.Display();
+          
         }
     }
 }
